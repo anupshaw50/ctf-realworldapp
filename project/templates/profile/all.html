@@ -1,0 +1,41 @@
+{% extends "layout/layout.html" %}
+
+{% block title %}Index{% endblock %}
+{% block content %}
+
+    <div class="col-lg-12">
+            <div class="panel panel-primary">
+                <div class="sd-title">
+                    <h3>All profiles</h3>
+                </div>
+                {% for item in users_prof %}
+
+                <div class="post-bar">
+                        <div class="post_topbar">
+                            <div class="usy-dt">
+                                <img src="/static/images/{{item[4]}}" alt="" width="40px" height="40px">
+                                <div class="usy-name">
+                                   <p>{{item[2]}}</p> 
+                                   <a href="/profile/{{item[0]}}" title=""><i class="la la-globe"></i>Direct Link to Profile</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="job_descp">
+                            <h3>Overview</h3>
+                                <p>{{item[7]}}</p>
+                            <ul class="job-dt">
+                                Experience
+                            </ul>
+                            <p>{{item[8]}}</p>
+                        </div>
+                        <div class="job-status-bar">
+                            <a href="{{item[9]}}" title=""><i class="la la-globe"></i>{{item[9]}}</a>
+
+
+                        </div>
+                    </div>
+                    {% endfor %}
+            </div>
+        </div>
+{% endblock %}
+

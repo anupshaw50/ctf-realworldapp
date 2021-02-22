@@ -1,0 +1,63 @@
+{% extends "layout/layout.html" %}
+
+{% block title %}Index{% endblock %}
+{% block content %}
+
+    <div class="col-lg-12">
+            <div class="panel panel-primary">
+                <div class="sd-title">
+                    <h3>Edit profile</h3>
+                </div>
+                <div class="jobs-list">
+                    <div class="post-project-fields">
+                            <form method="post" action="/profile/update">
+                
+                                Name:<br>
+                                <input id="btn-input" type="text" class="form-control input-sm" placeholder="Name" name="name" value="{{name}}" />
+                                Title:<br>
+                                <input id="btn-input" type="text" class="form-control input-sm" placeholder="Source" name="title" value="{{title}}" />
+                                Overview:<br>
+                                <textarea id="btn-input" rows="5" class="form-control input-sm" placeholder="Source" name="desc">{{desc}}</textarea>
+                                Experience:<br>
+                                <input id="btn-input" type="text" class="form-control input-sm" placeholder="Source" name="exp" value="{{exp}}" />
+                                LinkedIn:<br>
+                                <input id="btn-input" type="text" class="form-control input-sm" placeholder="Source" name="linkedin" value="{{linkedin}}" />
+                                <br>
+                                <ul>
+                                    <li>
+                                        <button class="active" type="submit" value="post">Send</button>  
+                                    </li>
+                                </ul>                 
+                            </form>
+                        </div>
+                </div>
+                <div class="sd-title">
+                        <h3>Upload new profile picture</h3>
+                    </div>
+                        {% if uploaded %}
+                        <div class="sd-title">
+                            <div class="alert alert-danger" role="alert">
+                                {{uploaded}}
+                            </div>	
+                            You can view your profile picture <a href="/profile/all">here</a>
+                            <br>
+                            Also to update your picture in the session please <a href="/login">re-login</a> again.
+                        </div>
+                        {% endif %}	
+
+                <div class="jobs-list">
+                        <div class="post-project-fields">
+                                <form method="post" action="/profile/uploads" enctype="multipart/form-data">
+                                    <input type="file" name="file"/><br/>
+                                    <ul>
+                                        <li>
+                                            <button class="active" type="submit" value="post">Upload profile picture</button>  
+                                        </li>
+                                    </ul>                 
+                                </form>
+                            </div>
+                    </div>
+            </div>
+        </div>
+{% endblock %}
+

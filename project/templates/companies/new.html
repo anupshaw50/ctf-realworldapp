@@ -1,0 +1,66 @@
+{% extends "layout/layout.html" %}
+
+{% block title %}Index{% endblock %}
+{% block content %}
+
+    <div class="col-lg-12">
+            <div class="panel panel-primary">
+                <div class="sd-title">
+                    <h3>Add new product</h3>
+                </div>
+                <div class="jobs-list">
+                    <div class="post-project-fields">
+                        <div class="panel-heading">
+                            Download XML example template file
+                        </div>
+                        <div class="panel-body" style="margin-bottom:5%">
+                            <form action="/companies/getXML" method="post">
+                                <input type="hidden" name="company" value="products.xml"/>
+                                <ul>
+                                    <li>
+                                        <button class="active" type="submit" value="post">Download</button>  
+                                    </li>
+                                </ul>                 
+                            </form>
+                        </div>
+                        </div>
+                </div>
+                <div class="sd-title">
+                        <h3>Upload new product XML file</h3>
+                    </div>
+                        {% if error %}
+                        <div class="sd-title">
+                            <div class="alert alert-danger" role="alert">
+                                {{error}}
+                            </div>	
+                        </div>
+                        {% endif %}	
+
+                <div class="jobs-list">
+                        <div class="post-project-fields">
+                                <form method="post" action="/company/upload" enctype="multipart/form-data">
+                                    <input type="file" name="company"/><br/>
+                                    <ul>
+                                        <li>
+                                            <button class="active" type="submit" value="post">Upload Product details</button>  
+                                        </li>
+                                    </ul>                 
+                                </form>
+                            </div>
+                            {% if nodes %}
+                            <div class="col-lg-12">
+                                    <div class="panel panel-green">
+                                        <div class="panel-heading">
+                                                Verify your XML content first before making it final
+                                        </div>
+                                        <div class="panel-body">
+                                        <pre>{{nodes}}</pre>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endif %}
+                    </div>
+            </div>
+        </div>
+{% endblock %}
+

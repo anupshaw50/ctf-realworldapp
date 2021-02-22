@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>WorkWise</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<link rel="stylesheet" type="text/css" href="/static/css/animate.css">
+<link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/static/css/line-awesome.css">
+<link rel="stylesheet" type="text/css" href="/static/css/line-awesome-font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="/static/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="/static/lib/slick/slick.css">
+<link rel="stylesheet" type="text/css" href="/static/lib/slick/slick-theme.css">
+<link rel="stylesheet" type="text/css" href="/static/css/style.css">
+<link rel="stylesheet" type="text/css" href="/static/css/responsive.css">
+<link rel="stylesheet" type="text/css" href="/static/css/jquery.mCustomScrollbar.min.css">
+<link rel="stylesheet" type="text/css" href="/static/css/flatpickr.min.css">
+<link rel="stylesheet" type="text/css" href="/static/css/jquery.range.css">
+</head>
+
+
+<body class="sign-in">
+	
+
+	<div class="wrapper">
+		
+
+		<div class="sign-in-page">
+			<div class="signin-popup">
+				<div class="signin-pop">
+					<div class="row">
+						<div class="col-lg-6">
+							<div class="cmp-info">
+								<div class="cm-logo">
+									<img src="/static/images/cm-logo.png" style="width: 30%; height: 30%;" alt="">
+									<p>Workwise,  is a global freelancing platform and social networking where businesses and independent professionals connect and collaborate remotely</p>
+								</div><!--cm-logo end-->	
+								<img src="/static/images/cm-main-img.png" alt="">			
+							</div><!--cmp-info end-->
+						</div>
+						<div class="col-lg-6">
+							<div class="login-sec">
+								<ul class="sign-control">
+									<li data-tab="tab-1" class="current"><a href="#" title="">Sign in</a></li>				
+								</ul>			
+								<div class="sign_in_sec current" id="tab-1">								
+									<h3>Sign in</h3>
+									{% if error %}
+									<div class="alert alert-danger" role="alert">
+										{{error}}
+									</div>	
+									{% endif %}	
+									<form method="get" action="/login">
+										<div class="row">
+											<div class="col-lg-12 no-pdd">
+												<div class="sn-field">
+													<input type="text" id="username" name="username" placeholder="Username">
+													<i class="la la-user"></i>
+												</div><!--sn-field end-->
+											</div>
+											<div class="col-lg-12 no-pdd">
+												<div class="sn-field">
+													<input type="password" id="password" name="password" placeholder="Password">
+													<i class="la la-lock"></i>
+												</div>
+											</div>
+											<div class="col-lg-12 no-pdd">
+												<div class="checky-sec">
+													<div class="fgt-sec">
+														<input type="checkbox" name="cc" id="c1">
+														<label for="c1">
+															<span></span>
+														</label>
+														<small>Remember me</small>
+													</div><!--fgt-sec end-->
+												</div>
+											</div>
+											<div class="col-lg-12 no-pdd">
+												<button type="submit" value="submit">Sign in</button>
+											</div>
+										</div>
+									</form>
+									
+								</div><!--sign_in_sec end-->
+								<div class="sign_in_sec" id="tab-2">
+								</div>		
+							</div><!--login-sec end-->
+						</div>
+					</div>		
+				</div><!--signin-pop end-->
+			</div><!--signin-popup end-->
+			<div class="footy-sec">
+				<div class="container">
+					<p><img src="/static/images/copy-icon.png" alt="">Copyright 2020</p>
+				</div>
+			</div><!--footy-sec end-->
+		</div><!--sign-in-page end-->
+
+
+	</div><!--theme-layout end-->
+
+<script type="text/javascript" src="/static/js/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/popper.js"></script>
+<script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/static/js/jquery.mCustomScrollbar.js"></script>
+<script type="text/javascript" src="/static/lib/slick/slick.min.js"></script>
+<script type="text/javascript" src="/static/js/scrollbar.js"></script>
+<script type="text/javascript" src="/static/js/script.js"></script>
+</body>
+</html>
