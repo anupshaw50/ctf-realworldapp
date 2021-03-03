@@ -1,0 +1,25 @@
+<pre>
+1 Server side template injection 
+2 Sensitive information in URL 
+3 Username enumeration 
+4 Session cookie is forgeable 
+5 Session revocation 
+6 CORS misconfiguration 
+7 Insecure deserialization - pickle [Sync] [Show working exploit]
+8 SQL injection 
+9 Obscure backdoor (RCE) 
+10 Missing authentication / authorization
+11 Insecure deserialization - yaml [Reset Config] [Show working exploit]
+12 Reflected cross site scripting 
+13 Stored cross site scripting 
+14 Cross site request forgery 
+15 Vulnerable libraries 
+16 Tabnabbing 
+17 Local File Inclusion  
+18 Insecure file upload 
+19 Insecure file upload, Size 
+20 Insecure file upload, Ext 
+21 External entity attack 
+22 Weak hashing method for authentication 
+23 IDOR [Work in Progress]
+<pre>

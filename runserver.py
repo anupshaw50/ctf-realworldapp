@@ -25,5 +25,5 @@ if __name__ == '__main__':
             os.system("cp random/sql/Dashboard.py project/models")
         os.system("rm -rf random/sql")
         os.system("zip -r project/static/source/code.zip ../target")
-    app.run(host='0.0.0.0',port=8082)
+    app.run(host='0.0.0.0',port=8000)
 

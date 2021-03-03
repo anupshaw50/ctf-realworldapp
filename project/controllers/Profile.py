@@ -88,3 +88,18 @@ def profile_uploads():
         uploaded = "something went wrong, please try again. If the problem is repetitive please contact an administrator!"
         return render_template("profile/edit.html", uploaded = uploaded , username ="", name="", pic="", banner="", title="", exp="", linkedin="", desc="")
     return render_template("profile/edit.html")
+
+
+@app.route("/salary/<id>", methods=['GET'])
+def salary(id):
+    try:
+        sqli  = Profiles()
+        #to see if its an active session 
+        checkActiveSession = sqli.getProfile(session['userId'])
+        #fetch relevent details
+        user_prof = sqli.getProfile(id)
+        print(user_prof)
+        salary = user_prof[0][10]
+        return salary
+    except:
+        return redirect("/login", code=302)
