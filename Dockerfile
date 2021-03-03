@@ -1,11 +1,11 @@
 FROM ubuntu
-WORKDIR /home/examFiles/ctf-wsa
+WORKDIR /root/ctf-realworldapp
 
 COPY * ./
 RUN apt update
 RUN apt install python3 -y
 RUN apt install python3-pip -y
-RUN cd /home/examFiles/ctf-wsa
+RUN cd /root/ctf-realworldapp
 RUN pip3 install -r requirements.txt
 RUN pip3 install gevent
 COPY . .
