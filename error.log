@@ -1,4 +1,0 @@
-[Fri Feb 12 12:41:13.379979 2021] [authz_core:error] [pid 15458] [client 103.42.157.121:1113] AH01630: client denied by server configuration: /home/examFiles/ctf-wsa/ctf_wsa.wsgi
-[Fri Feb 12 12:41:13.531371 2021] [authz_core:error] [pid 15458] [client 103.42.157.121:1113] AH01630: client denied by server configuration: /home/examFiles/ctf-wsa/ctf_wsa.wsgi, referer: http://139.59.45.230:8081/
-[Fri Feb 12 12:43:27.710257 2021] [authz_core:error] [pid 15617] [client 103.42.157.121:1032] AH01630: client denied by server configuration: /home/examFiles/ctf-wsa/ctf_wsa.wsgi
-[Fri Feb 12 12:43:27.868652 2021] [authz_core:error] [pid 15617] [client 103.42.157.121:1032] AH01630: client denied by server configuration: /home/examFiles/ctf-wsa/ctf_wsa.wsgi, referer: http://139.59.45.230:8081/

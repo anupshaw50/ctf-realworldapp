@@ -29,4 +29,6 @@ docker run -p 3000:3000 anupshaw50/onlinectfwsa
  - Paste the docker run command ```docker run -p 3000:3000 anupshaw50/onlinectfwsa```
  - Click on OpenPort and open port 3000
 
+## List of Vulnerabilities
+ - Goto https://{vulnerableURL}:{vulnerablePORT}/list
 *Credits to OWASP SKF
