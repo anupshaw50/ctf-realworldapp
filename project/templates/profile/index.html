@@ -27,6 +27,27 @@
                             <h3>Experience</h3>
                             <p>{{exp}}</p>
                         </div>
+
+                        <div class="user-profile-ov">
+                            <h3>Salary</h3>
+                            <div id="demo">
+                                <button type="button" onclick="loadSalary()">Show Your Salary</button>
+                            </div>
+                            <script>
+                                function loadSalary() {
+                                var xhttp = new XMLHttpRequest();
+                                xhttp.onreadystatechange = function() {
+                                    if (this.readyState == 4 && this.status == 200) {
+                                    document.getElementById("demo").innerHTML =
+                                    this.responseText;
+                                    }
+                                };
+                                xhttp.open("GET", "/salary/{{user_id}}", true);
+                                xhttp.send();
+                                }
+                                </script>
+    
+                        </div>
                 </div>
             </div>
         </div>
